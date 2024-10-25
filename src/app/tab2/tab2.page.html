@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Hoja de vida 
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,96 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>DESARROLLADOR DE SOFTWARE</ion-card-title>
+      <ion-card-subtitle>ESCUELA POLITECNICA NACIONAL</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="content-container">
+        <img src="assetsexample" alt="fotoCV" class="profile-image">
+        <div class="text-content">
+          <ion-card-title class="profile-title">Perfil</ion-card-title>
+          Soy una persona que se adapta fácilmente a cualquier tipo de trabajo,
+          aprendo muy rápido acerca del cargo que se me asigne, me interesa
+          mucho aprender y compartir mis conocimientos.
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Habilidades</ion-card-title>
+    </ion-card-header>
+    <ion-list [inset]="true">
+      <ion-item>
+        <ion-label>Trabajo en equipo</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Manejo de bases de datos SQL y NoSQL</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Analisis de datos</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Manejo de herramientas para programacion web</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Experiencia Laboral</ion-card-title>
+    </ion-card-header>
+    <ion-list [inset]="true">
+      <ion-item>
+        <h2>Servicio Integrado de Seguridad ECU 911</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h3>Tecnico</h3>
+          <p>Tareas realizadas:</p>
+            <p>• Soporte técnico en software y hardware</p>
+            <p>• Colaboración en data center</p>
+            <p>• Configuración de equipos</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <h2>Old Strategic Planning International Ecuador OSP</h2>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h3>Analista de datos</h3>
+          <p>Tareas realizadas:</p>
+            <p>• Analisis de datos y generación de reportes</p>
+            <p>• Aplicación de Bussines Intelligence</p>
+            <p>• Manejo de metadatos</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-button (click)="visualizarPDF()">Visualizar PDF</ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="information-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="showContent('Telefono: 0999807507')">
+        <ion-icon name="call"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="showContent('Email: example@gmail.com')">
+        <ion-icon name="mail"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="showContent('Cedula: 1726082929')">
+        <ion-icon name="id-card"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="showContent('Direccion: Quito-Ecuador')">
+        <ion-icon name="pin"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
 </ion-content>
